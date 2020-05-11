@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 4</title>
+</head>
+
+<body>
+    <script>
+        var escolhaPlayer = prompt("Faça sua escolha: (Pedra, Papel ou Tesoura)");
+        escolhaPlayer = escolhaPlayer.toUpperCase();
+
+        function randomNum(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var escolhaPC = randomNum(0, 2);
+
+        var escolhaP;
+
+        switch (escolhaPlayer) {
+            case "PEDRA":
+                escolhaP = 0;
+                break;
+
+            case "PAPEL":
+                escolhaP = 1;
+                break;
+
+            case "TESOURA":
+                escolhaP = 2;
+                break;
+
+            default:
+                alert("Entrada inválida");
+                break;
+        }
+        var stringPC;
+
+        if (escolhaPC == 0)
+            stringPC = "PEDRA";
+
+        else if (escolhaPC == 1)
+            stringPC = "PAPEL";
+
+        else if (escolhaPC == 2)
+            stringPC = "TESOURA";
+
+        if (escolhaP == escolhaPC)
+            alert("Sua escolha: " + escolhaPlayer + "\nEscolha do PC: " + stringPC + "\nResultado: " + "Empate");
+
+        else if ((escolhaP == 0) && (escolhaPC == 1))
+            alert("Sua escolha: " + escolhaPlayer.toString() + "\nEscolha do PC: " + stringPC + "\nResultado: " + "Você perdeu! - Papel vence Pedra");
+
+        else if ((escolhaP == 0) && (escolhaPC == 2)) alert("Sua escolha: " + escolhaPlayer.toString() + "\nEscolha do PC: " + stringPC + "\nResultado: " + "Você venceu! - Pedra vence Tesoura");
+
+            else if ((escolhaP == 1) && (escolhaPC == 0))
+                alert("Sua escolha: " + escolhaPlayer.toString() + "\nEscolha do PC: " + stringPC + "\nResultado: " + "Você venceu! - Papel vence Pedra");
+
+            else if ((escolhaP == 1) && (escolhaPC == 2))
+                alert("Sua escolha: " + escolhaPlayer.toString() + "\nEscolha do PC: " + stringPC + "\nResultado: " + "Você perdeu! - Tesoura vence Papel");
+
+            else if ((escolhaP == 2) && (escolhaPC == 0))
+                alert("Sua escolha: " + escolhaPlayer.toString() + "\nEscolha do PC: " + stringPC + "\nResultado: " + "Você perdeu! - Pedra vence Tesoura");
+
+            else if ((escolhaP == 2) && (escolhaPC == 1))
+                alert("Sua escolha: " + escolhaPlayer.toString() + "\nEscolha do PC: " + stringPC + "\nResultado: " + "Você venceu! - Tesoura vence Papel");
+
+    </script>
+
+</body>
+
+</html>
