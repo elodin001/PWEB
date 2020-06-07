@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 8</title>
+</head>
+<script>
+    function abrejanela() {
+        document.getElementById("janela").src = "janelaaberta.png";
+    }
+
+    function fechajanela() {
+        document.getElementById("janela").src = "janelafechada.png";
+    }
+
+    function quebrajanela() {
+        document.getElementById("janela").src = "janelaquebrada.png";
+    }
+
+</script>
+
+<body>
+    <h1>
+        Abra a janela
+    </h1>
+    <img id="janela" src="janelafechada.png" alt="openwindow" onmouseover="abrejanela()" onmouseout="fechajanela()" onclick="quebrajanela()" width="444" height="561">
+
+</body>
+
+</html>
