@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 10</title>
+    <link rel="stylesheet" href="Atividade10.css">
+    <script type="text/javascript" src="Atividade10.js"></script>
+</head>
+
+<body>
+    <div class="formDiv">
+        <h1 class="titulo">Formulário Principal</h1>
+        <hr>
+
+        <form class="formulario" action="Atividade10.html" name="formulario" onsubmit="validar()" method="post">
+
+            <label><i>Nome</i>:</label><br>
+            <input minlength="10" type="text" id="nome" size="30" name="nome"><br><br>
+
+            <label><i>E-mail</i>:</label><br>
+            <input type="email" id="email" size="55" name="email"><br><br>
+
+            <label><i>Comentário</i>:</label><br>
+            <textarea minlength="20" id="comentario" cols="30" rows="5" name="cometario"></textarea>
+
+            
+                <h3 class="pesquisa">Pesquisa:</h3>
+                
+                <label class="primeiraVez"><i>Primeira vez nessa página?</i></label><br><br><br>
+
+                <input class="radioEsq" type="radio" id="escolhaSim" name="escolha" value="sim">Sim
+                <input type="radio" id="escolhaNao" name="escolha" value="Não">Não<br><br>
+                
+                <input class="submitEsq" type="submit" value="Enviar" id="botao1">
+                <input type="submit" value="Limpar" id="botao2">
+
+            
+        </form>
+        
+
+</body>
+
+</html>
