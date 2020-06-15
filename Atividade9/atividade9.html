@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade9</title>
+</head>
+
+<body style="background-color: azure">
+    <label>Texto: </label>
+    <input type="text" id="texto" name="texto" size="90px"><br><br>
+
+    <label>Para maiúsculas: </label>
+    <input type="checkbox" id="checkBox1" name="checkBox1" onclick="if(this.checked){maiuscula()}"><br>
+
+    <label>Para minúculas: </label>
+    <input type="checkbox" id="checkBox2" name="checkBox2" onclick="if(this.checked){minuscula()}"><br>
+
+    <script>
+        function maiuscula() {
+            document.getElementById("texto").value = document.getElementById("texto").value.toUpperCase();
+        }
+
+
+
+        function minuscula() {
+            document.getElementById("texto").value = document.getElementById("texto").value.toLowerCase();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
